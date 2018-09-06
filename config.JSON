@@ -1,0 +1,118 @@
+{ "config" :
+	[
+		{
+			"description": "Multi Master InnoDB Cluster",
+			"servers": [
+				{
+					"ip": "127.0.0.1",
+					"port": 3310
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3320
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3330
+				}
+			],
+			"router": {
+				"ip": "127.0.0.1",
+				"write": 6446,
+				"read": 6446
+			}
+		},
+
+		{
+			"description": "Single Primary InnoDB Cluster",
+			"servers": [
+				{
+					"ip": "127.0.0.1",
+					"port": 3310
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3320
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3330
+				}
+			],
+			"router": {
+				"ip": "127.0.0.1",
+				"write": 6446,
+				"read": 6447
+			}
+		},
+
+		{
+			"description": "Single Primary InnoDB Cluster Extended",
+			"servers": [
+				{
+					"ip": "127.0.0.1",
+					"port": 3310
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3320
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3330
+				},
+				{
+					"ip": "127.0.0.1",
+					"port": 3340
+				}
+			],
+			"router": {
+				"ip": "127.0.0.1",
+				"write": 6446,
+				"read": 6447
+			}
+		},
+
+		{
+			"description": "MySQL Cluster (NDB)",
+			"servers": [
+				{
+					"ip": "192.168.1.1",
+					"port": 3306
+				},
+				{
+					"ip": "192.168.1.2",
+					"port": 3307
+				}
+			],
+			"router": {
+				"ip": "127.0.0.1",
+				"write": 6446,
+				"read": 6446
+			}
+		},
+
+		{
+			"description": "MySQL Cluster (NDB) Extended",
+			"servers": [
+				{
+					"ip": "192.168.1.1",
+					"port": 3306
+				},
+				{
+					"ip": "192.168.1.2",
+					"port": 3307
+				},
+				{
+					"ip": "192.168.1.2",
+					"port": 3306
+				}
+			],
+			"router": {
+				"ip": "127.0.0.1",
+				"write": 6446,
+				"read": 6446
+			}
+		}
+	]
+}
